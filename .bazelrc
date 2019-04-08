@@ -1,0 +1,2 @@
+build --strategy=Scalac=worker --strategy=Javac=worker --strict_java_deps=warn --symlink_prefix=/
+test --test_verbose_timeout_warnings --test_output=all --nocache_test_results

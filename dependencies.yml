@@ -1,0 +1,20 @@
+options:
+  versionConflictPolicy: highest
+  resolverCache: bazel_output_base
+  resolverType: coursier
+  buildHeader:
+    - load("@io_bazel_rules_scala//scala:scala.bzl", "scala_library")
+    - load("@io_bazel_rules_scala//scala:scala_import.bzl", "scala_import")
+  resolvers:
+    - id: "mavencentral"
+      type: "default"
+      url: https://repo.maven.apache.org/maven2/
+dependencies:
+  org.scalatest:
+    scalatest:
+      lang: scala
+      version: "3.0.4"
+  org.scalamock:
+    scalamock-scalatest-support:
+      lang: scala
+      version: "3.6.0"
